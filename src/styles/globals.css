@@ -1,0 +1,97 @@
+/* src/styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased text-secondary dark:text-white;
+  }
+  
+  /* Personalização da scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-secondary-light;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-secondary rounded-full border-2 border-gray-100 dark:border-secondary-light;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+  
+  /* Seleção de texto */
+  ::selection {
+    @apply bg-primary/20 text-secondary dark:text-white;
+  }
+}
+
+/* Animações customizadas */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(55, 227, 89, 0.5);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 20px rgba(55, 227, 89, 0.8);
+  }
+}
+
+@keyframes morphGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Classes de utilidade personalizadas */
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500;
+  background-size: 200% 200%;
+  animation: morphGradient 5s ease infinite;
+}
+
+.shadow-neon {
+  box-shadow: 0 0 5px theme('colors.primary.DEFAULT'), 0 0 20px rgba(55, 227, 89, 0.3);
+}
+
+.shadow-neon-lg {
+  box-shadow: 0 0 10px theme('colors.primary.DEFAULT'), 0 0 30px rgba(55, 227, 89, 0.5);
+}
+
+/* Estilo para seções */
+.section {
+  @apply py-20;
+}
+
+/* Transições suaves para modo escuro/claro */
+.dark .transition-theme,
+.transition-theme {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, fill 0.3s ease;
+}
