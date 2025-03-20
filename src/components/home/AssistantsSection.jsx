@@ -48,7 +48,7 @@ const AssistantsSection = () => {
       name: 'Isa',
       role: 'Crie um cronograma de estudos personalizado',
       color: '#FF5757',
-      destination: '#'
+      destination: 'https://api.whatsapp.com/send/?phone=551151925844&text=Ol%C3%A1+Isa%2C+tudo+bem+%3F+Quero+criar+meu+cronograma+de+estudos%21&type=phone_number&app_absent=0'
     }
   ];
 

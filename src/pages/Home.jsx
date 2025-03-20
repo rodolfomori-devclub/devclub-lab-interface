@@ -87,6 +87,12 @@ const Home = () => {
               >
                 Começar com a Fernanda
               </a>
+              <a
+                href="https://api.whatsapp.com/send/?phone=551151925844&text=Ol%C3%A1+Isa%2C+tudo+bem+%3F+Quero+criar+meu+cronograma+de+estudos%21&type=phone_number&app_absent=0"
+                className="px-8 py-4 bg-primary text-white font-medium rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-neon"
+              >
+                Começar com a Isa
+              </a>
             </div>
           </div>
         </div>
